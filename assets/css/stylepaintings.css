@@ -1,0 +1,245 @@
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  color: #eef5f0;
+
+}
+/* Borrowed free Navbar that I had to convert from SCSS and build in without proper HTML part */
+body {
+  background: url('../images/ukrainianflag.gif') center / cover no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none; 
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.menu-bar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; 
+  left: 30px; 
+  border-radius: 25px;
+  height: fit-content;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
+  z-index: 9999;
+  white-space: nowrap;
+}
+.menu-bar li {
+  all: unset;
+  display: inline-block;
+  width: auto;
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 8px 2px; /* was 8 10 or 16 idk */
+  margin: 0 13px;  /* was 0 16 */
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+.menu-bar li:hover {
+  color: black;
+}
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0px 3px 20px 0px black;
+  transform: scale(1.2);
+}
+/* End NavBar */
+
+
+/* Old navbar design from the lesson
+    .navbar {
+    background-color: #CE4427;
+    overflow: hidden;
+  }
+  Navigation bar links
+.navbar a {
+    display: block;
+    padding: 20px 25px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    color: white;
+  }
+  /*Hovering over navigation bar
+.navbar a:hover {
+    background-color: #faf800;
+    color: black;
+  }
+*/
+
+
+
+
+  /*Introduction*/
+.summary {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: center;
+  letter-spacing: 4px;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  z-index: 200;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/*about section*/
+.about {
+  position: relative;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 50%;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  letter-spacing: 4px;
+  z-index: 300;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.about h2,
+p {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+ 
+}
+
+.about a{
+  border-bottom: double #eef5f0;
+}
+.about p {
+  font-size: 20px;
+}
+.contact h2,
+ul,
+li {
+  overflow: hidden;
+  text-align: center;
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.contact li {
+  padding-left: 1%;
+}
+
+.contact a {
+  border-bottom: none;
+  text-decoration: none;
+}
+.contact {
+  position: relative;
+  top: 70%;
+  left: 50%;
+  margin-bottom: 40px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  letter-spacing: 4px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Style all font awesome icons */
+.fa {
+  /* position: relative;
+  top: 70%;
+  left: 35%;
+  transform: translate(-20%, -20%);  */
+ 
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: 30px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.contact a {
+ display:inline-flex;
+ position: relative;
+ left: 22%;
+ /* align-items: center; */
+ /* justify-content: space-evenly; */
+ margin: 20px;
+}
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #dd4b39;
+  color: white;
+}
+.fa-telegram {
+  background: #125688;
+  color: white;
+}
+.fa-google {
+  background: #0cb156;
+  color: white;
+}
